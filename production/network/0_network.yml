@@ -1,4 +1,4 @@
-Description: Creates Production's Network
+Description: Create Production's Network
 
 Parameters:
   EnvironmentName:
@@ -84,7 +84,7 @@ Resources:
   InternetGatewayAttachment:
     Type: AWS::EC2::VPCGatewayAttachment
     Properties:
-      InternetGatewayId: !Ref EnvironmentName
+      InternetGatewayId: !Ref InternetGateway
       VpcId: !Ref VPC
 
   PublicSubnet1:
@@ -340,76 +340,24 @@ Resources:
       RouteTableId: !Ref PublicRouteTable
       DestinationCidrBlock: 0.0.0.0/0
       GatewayId: !Ref InternetGateway
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-default-public-rt
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: public
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PublicSubnet1RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet1
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-public-srta-a
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: public
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PublicSubnet2RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet2
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-public-srta-b
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: public
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PublicSubnet3RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PublicRouteTable
       SubnetId: !Ref PublicSubnet3
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-public-srta-c
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: public
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateRouteTable1:
     Type: AWS::EC2::RouteTable
@@ -435,38 +383,12 @@ Resources:
       RouteTableId: !Ref PrivateRouteTable1
       DestinationCidrBlock: 0.0.0.0/0
       NatGatewayId: !Ref NatGateway1
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-default-private-rt-a
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateSubnet1RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PrivateRouteTable1
       SubnetId: !Ref PrivateSubnet1
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-private-srta-a
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateRouteTable2:
     Type: AWS::EC2::RouteTable
@@ -492,38 +414,12 @@ Resources:
       RouteTableId: !Ref PrivateRouteTable2
       DestinationCidrBlock: 0.0.0.0/0
       NatGatewayId: !Ref NatGateway2
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-default-private-rt-b
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateSubnet2RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PrivateRouteTable2
       SubnetId: !Ref PrivateSubnet2
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-private-srta-b
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateRouteTable3:
     Type: AWS::EC2::RouteTable
@@ -549,38 +445,12 @@ Resources:
       RouteTableId: !Ref PrivateRouteTable3
       DestinationCidrBlock: 0.0.0.0/0
       NatGatewayId: !Ref NatGateway3
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-default-private-rt-c
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
   PrivateSubnet3RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
     Properties:
       RouteTableId: !Ref PrivateRouteTable3
       SubnetId: !Ref PrivateSubnet3
-      Tags:
-        - Key: Name
-          Value: !Sub ${EnvironmentName}-private-srta-c
-        - Key: env
-          Value: !Sub ${EnvironmentName}
-        - Key: scope
-          Value: private
-        - Key: managedby
-          Value: cloudformation
-        - Key: owner-team
-          Value: !Sub ${OwnerTeam}
-        - Key: project
-          Value: !Sub ${Project}
 
 Outputs:
   VPC:
