@@ -60,26 +60,26 @@ Resources:
       EnableDnsHostnames: true
       Tags:
         - Key: Name
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   InternetGateway:
     Type: AWS::EC2::InternetGateway
     Properties:
       Tags:
         - Key: Name
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   InternetGatewayAttachment:
     Type: AWS::EC2::VPCGatewayAttachment
@@ -100,13 +100,13 @@ Resources:
         - Key: scope
           Value: public
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicSubnet2:
     Type: AWS::EC2::Subnet
@@ -121,13 +121,13 @@ Resources:
         - Key: scope
           Value: public
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicSubnet3:
     Type: AWS::EC2::Subnet
@@ -142,13 +142,13 @@ Resources:
         - Key: scope
           Value: public
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet1:
     Type: AWS::EC2::Subnet
@@ -163,13 +163,13 @@ Resources:
         - Key: scope
           Value: private
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet2:
     Type: AWS::EC2::Subnet
@@ -184,13 +184,13 @@ Resources:
         - Key: scope
           Value: private
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet3:
     Type: AWS::EC2::Subnet
@@ -205,13 +205,13 @@ Resources:
         - Key: scope
           Value: private
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway1EIP:
     Type: AWS::EC2::EIP
@@ -222,13 +222,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-nga-a
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway2EIP:
     Type: AWS::EC2::EIP
@@ -239,13 +239,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-nga-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway3EIP:
     Type: AWS::EC2::EIP
@@ -256,13 +256,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-nga-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway1:
     Type: AWS::EC2::NatGateway
@@ -273,13 +273,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-ng-a
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway2:
     Type: AWS::EC2::NatGateway
@@ -290,13 +290,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-ng-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   NatGateway3:
     Type: AWS::EC2::NatGateway
@@ -307,13 +307,13 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-ng-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicRouteTable:
     Type: AWS::EC2::RouteTable
@@ -323,15 +323,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-public-rt
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: public
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   DefaultPublicRoute:
     Type: AWS::EC2::Route
@@ -344,15 +344,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-default-public-rt
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: public
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicSubnet1RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -363,15 +363,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-public-srta-a
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: public
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicSubnet2RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -382,15 +382,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-public-srta-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: public
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PublicSubnet3RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -401,15 +401,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-public-srta-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: public
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateRouteTable1:
     Type: AWS::EC2::RouteTable
@@ -419,15 +419,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-rt
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   DefaultPrivateRoute1:
     Type: AWS::EC2::Route
@@ -439,15 +439,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-default-private-rt-a
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet1RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -458,15 +458,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-srta-a
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateRouteTable2:
     Type: AWS::EC2::RouteTable
@@ -476,15 +476,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-rt-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   DefaultPrivateRoute2:
     Type: AWS::EC2::Route
@@ -496,15 +496,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-default-private-rt-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet2RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -515,15 +515,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-srta-b
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateRouteTable3:
     Type: AWS::EC2::RouteTable
@@ -533,15 +533,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-rt-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   DefaultPrivateRoute3:
     Type: AWS::EC2::Route
@@ -553,15 +553,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-default-private-rt-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
   PrivateSubnet3RouteTableAssociation:
     Type: AWS::EC2::SubnetRouteTableAssociation
@@ -572,15 +572,15 @@ Resources:
         - Key: Name
           Value: !Sub ${EnvironmentName}-private-srta-c
         - Key: env
-          Value: !Sub EnvironmentName
+          Value: !Sub ${EnvironmentName}
         - Key: scope
           Value: private
         - Key: managedby
           Value: cloudformation
         - Key: owner-team
-          Value: !Sub OwnerTeam
+          Value: !Sub ${OwnerTeam}
         - Key: project
-          Value: !Sub Project
+          Value: !Sub ${Project}
 
 Outputs:
   VPC:
