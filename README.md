@@ -92,12 +92,10 @@ This template has outputs and this outputs can be used by anothe Stack.
 | PrivateSubnet2Id        | subnet-07c105443da5b0a1d                                                   | A reference to the private subnet in the 2nd Availability Zone | Network-PrivateSubnet2Id        |
 | PrivateSubnet3CidrBlock | 10.50.22.0/24                                                              | -                                                              | Network-PrivateSubnet3CidrBlock |
 | PrivateSubnet3Id        | subnet-0e6dbbfde5def5cd4                                                   | A reference to the private subnet in the 3rd Availability Zone | Network-PrivateSubnet3Id        |
-| PrivateSubnetsIds       | subnet-0b5fcac261bf189aa,subnet-07c105443da5b0a1d,subnet-0e6dbbfde5def5cd4 | A list of the private subnets                                  | Network-PrivateSubnetsIds       |
 | PublicSubnet1CidrBlock  | 10.50.10.0/24                                                              | -                                                              | Network-PublicSubnet1CidrBlock  |
 | PublicSubnet1Id         | subnet-03a6c223334e04f5a                                                   | A reference to the public subnet in the 1st Availability Zone  | Network-PublicSubnet1Id         |
 | PublicSubnet2CidrBlock  | 10.50.11.0/24                                                              | -                                                              | Network-PublicSubnet2CidrBlock  |
 | PublicSubnet2Id         | subnet-03b8c75d6b001e6f7                                                   | A reference to the public subnet in the 2nd Availability Zone  | Network-PublicSubnet2Id         |
 | PublicSubnet3CidrBlock  | 10.50.12.0/24                                                              | -                                                              | Network-PublicSubnet3CidrBlock  |
 | PublicSubnet3Id         | subnet-0cf41c0f6fe3b1883                                                   | A reference to the public subnet in the 3rd Availability Zone  | Network-PublicSubnet3Id         |
-| PublicSubnetsIds        | subnet-03a6c223334e04f5a,subnet-03b8c75d6b001e6f7,subnet-0cf41c0f6fe3b1883 | A list of the public subnets                                   | Network-PublicSubnetsIds        |
 | VPCId                   | vpc-040776eb945f3e6fc                                                      | A reference to the created VPC                                 | Network-VPCId                   |
