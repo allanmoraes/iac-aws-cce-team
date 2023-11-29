@@ -457,88 +457,76 @@ Outputs:
     Description: A reference to the created VPC
     Value: !Ref VPC
     Export:
-      Name: !Sub 'Network-VPCId'
+      Name: 'Network-VPCId'
 
   PrimaryCidrBlock:
     Description: A reference to the VPC CidrBlock
     Value: !GetAtt VPC.CidrBlock
     Export:
-      Name: !Sub 'Network-PrimaryCidrBlock'
-
-  PublicSubnetsIds:
-    Description: A list of the public subnets
-    Value: !Join [ ",", [ !Ref PublicSubnet1, !Ref PublicSubnet2, !Ref PublicSubnet3 ]]
-    Export:
-      Name: !Sub 'Network-PublicSubnetsIds'
-
-  PrivateSubnetsIds:
-    Description: A list of the private subnets
-    Value: !Join [ ",", [ !Ref PrivateSubnet1, !Ref PrivateSubnet2, !Ref PrivateSubnet3 ]]
-    Export:
-      Name: !Sub 'Network-PrivateSubnetsIds'
+      Name: 'Network-PrimaryCidrBlock'
 
   PublicSubnet1Id:
     Description: A reference to the public subnet in the 1st Availability Zone
     Value: !Ref PublicSubnet1
     Export:
-      Name: !Sub 'Network-PublicSubnet1Id'
+      Name: 'Network-PublicSubnet1Id'
 
   PublicSubnet1CidrBlock:
     Value: !GetAtt PublicSubnet1.CidrBlock
     Export:
-      Name: !Sub 'Network-PublicSubnet1CidrBlock'
+      Name: 'Network-PublicSubnet1CidrBlock'
 
   PublicSubnet2Id:
     Description: A reference to the public subnet in the 2nd Availability Zone
     Value: !Ref PublicSubnet2
     Export:
-      Name: !Sub 'Network-PublicSubnet2Id'
+      Name: 'Network-PublicSubnet2Id'
 
   PublicSubnet2CidrBlock:
     Value: !GetAtt PublicSubnet2.CidrBlock
     Export:
-      Name: !Sub 'Network-PublicSubnet2CidrBlock'
+      Name: 'Network-PublicSubnet2CidrBlock'
 
   PublicSubnet3Id:
     Description: A reference to the public subnet in the 3rd Availability Zone
     Value: !Ref PublicSubnet3
     Export:
-      Name: !Sub 'Network-PublicSubnet3Id'
+      Name: 'Network-PublicSubnet3Id'
 
   PublicSubnet3CidrBlock:
     Value: !GetAtt PublicSubnet3.CidrBlock
     Export:
-      Name: !Sub 'Network-PublicSubnet3CidrBlock'
+      Name: 'Network-PublicSubnet3CidrBlock'
 
   PrivateSubnet1Id:
     Description: A reference to the private subnet in the 1st Availability Zone
     Value: !Ref PrivateSubnet1
     Export:
-      Name: !Sub 'Network-PrivateSubnet1Id'
+      Name: 'Network-PrivateSubnet1Id'
 
   PrivateSubnet1CidrBlock:
     Value: !GetAtt PrivateSubnet1.CidrBlock
     Export:
-      Name: !Sub 'Network-PrivateSubnet1CidrBlock'
+      Name: 'Network-PrivateSubnet1CidrBlock'
 
   PrivateSubnet2Id:
     Description: A reference to the private subnet in the 2nd Availability Zone
     Value: !Ref PrivateSubnet2
     Export:
-      Name: !Sub 'Network-PrivateSubnet2Id'
+      Name: 'Network-PrivateSubnet2Id'
 
   PrivateSubnet2CidrBlock:
     Value: !GetAtt PrivateSubnet2.CidrBlock
     Export:
-      Name: !Sub 'Network-PrivateSubnet2CidrBlock'
+      Name: 'Network-PrivateSubnet2CidrBlock'
 
   PrivateSubnet3Id:
     Description: A reference to the private subnet in the 3rd Availability Zone
     Value: !Ref PrivateSubnet3
     Export:
-      Name: !Sub 'Network-PrivateSubnet3Id'
+      Name: 'Network-PrivateSubnet3Id'
 
   PrivateSubnet3CidrBlock:
     Value: !GetAtt PrivateSubnet3.CidrBlock
     Export:
-      Name: !Sub 'Network-PrivateSubnet3CidrBlock'
+      Name: 'Network-PrivateSubnet3CidrBlock'
