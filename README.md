@@ -43,13 +43,13 @@ This template are parametrized
  - **PublicSubnet2CIDR:** Public Subnet2's CIDR
     - **Default:** 10.50.11.0/24
  - **PublicSubnet3CIDR:** Public Subnet3's CIDR
-    - Default: 10.50.12.0/24
+    - **Default:** 10.50.12.0/24
  - **PrivateSubnet1CIDR:** Private Subnet1's CIDR
-    - Default: 10.50.20.0/24
+    - **Default:** 10.50.20.0/24
  - **PrivateSubnet2CIDR:** Private Subnet2's CIDR
-    - Default: 10.50.21.0/24
+    - **Default:** 10.50.21.0/24
  - **PrivateSubnet3CIDR:** Private Subnet3's CIDR
-    - Default: 10.50.22.0/24
+    - **Default:** 10.50.22.0/24
 ---
 
 ## How to run
