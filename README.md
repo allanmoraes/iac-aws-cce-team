@@ -8,12 +8,8 @@ What it is created?
 
 - One VPC
 - Three Public subnets
-- Three Private subnets
 - One InternetGateway and one InternetGateway Attachment
-- Three Private NatGateways
-- Three Elastic IPs
 - One Public Route Table, routes and associations
-- Trhee Private Route Tables, routes and associations
 
 ### Resource Map
 
@@ -21,10 +17,6 @@ A diagram of public network.
 
 ![Public Network](./docs/images/public_network.png)
 
-
-A diagram of private network.
-
-![Private Network](./docs/images/private_networks.gif)
 ---
 ## Parameters
 
@@ -44,12 +36,7 @@ This template are parametrized
     - **Default:** 10.50.11.0/24
  - **PublicSubnet3CIDR:** Public Subnet3's CIDR
     - Default: 10.50.12.0/24
- - **PrivateSubnet1CIDR:** Private Subnet1's CIDR
-    - Default: 10.50.20.0/24
- - **PrivateSubnet2CIDR:** Private Subnet2's CIDR
-    - Default: 10.50.21.0/24
- - **PrivateSubnet3CIDR:** Private Subnet3's CIDR
-    - Default: 10.50.22.0/24
+
 ---
 
 ## How to run
@@ -76,23 +63,10 @@ This template has outputs and this outputs can be used by anothe Stack.
  - **PublicSubnet2CidrBlock:** A reference to the public subnet CIDR in the 2nd Availability Zone
  - **PublicSubnet3Id:** A reference to the public subnet in the 3rd Availability Zone
  - **PublicSubnet3CidrBlock:** A reference to the public subnet CIDR in the 3rd Availability Zone
- - **PrivateSubnet1Id:** A reference to the private subnet in the 1st Availability Zone
- - **PrivateSubnet1CidrBlock:** A reference to the private subnet CIDR in the 1st Availability Zone
- - **PrivateSubnet2Id:** A reference to the private subnet in the 2nd Availability Zone
- - **PrivateSubnet2CidrBlock:** A reference to the private subnet CIDR in the 2nd Availability Zone
- - **PrivateSubnet3Id:** A reference to the private subnet in the 3rd Availability Zone
- - **PrivateSubnet3CidrBlock:** A reference to the private subnet CIDR in the 3rd Availability Zone
 
 | Key                     | Value                                                                      | Description                                                    | Export name                     |
 |-------------------------|----------------------------------------------------------------------------|----------------------------------------------------------------|---------------------------------|
 | PrimaryCidrBlock        | 10.50.0.0/16                                                               | A reference to the VPC CidrBlock                               | Network-PrimaryCidrBlock        |
-| PrivateSubnet1CidrBlock | 10.50.20.0/24                                                              | -                                                              | Network-PrivateSubnet1CidrBlock |
-| PrivateSubnet1Id        | subnet-0b5fcac261bf189aa                                                   | A reference to the private subnet in the 1st Availability Zone | Network-PrivateSubnet1Id        |
-| PrivateSubnet2CidrBlock | 10.50.21.0/24                                                              | -                                                              | Network-PrivateSubnet2CidrBlock |
-| PrivateSubnet2Id        | subnet-07c105443da5b0a1d                                                   | A reference to the private subnet in the 2nd Availability Zone | Network-PrivateSubnet2Id        |
-| PrivateSubnet3CidrBlock | 10.50.22.0/24                                                              | -                                                              | Network-PrivateSubnet3CidrBlock |
-| PrivateSubnet3Id        | subnet-0e6dbbfde5def5cd4                                                   | A reference to the private subnet in the 3rd Availability Zone | Network-PrivateSubnet3Id        |
-| PrivateSubnetsIds       | subnet-0b5fcac261bf189aa,subnet-07c105443da5b0a1d,subnet-0e6dbbfde5def5cd4 | A list of the private subnets                                  | Network-PrivateSubnetsIds       |
 | PublicSubnet1CidrBlock  | 10.50.10.0/24                                                              | -                                                              | Network-PublicSubnet1CidrBlock  |
 | PublicSubnet1Id         | subnet-03a6c223334e04f5a                                                   | A reference to the public subnet in the 1st Availability Zone  | Network-PublicSubnet1Id         |
 | PublicSubnet2CidrBlock  | 10.50.11.0/24                                                              | -                                                              | Network-PublicSubnet2CidrBlock  |
